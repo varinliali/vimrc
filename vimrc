@@ -39,8 +39,6 @@ endif
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
-                \:call <SID>StripTrailingWhitespaces()
     autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
     autocmd FileType java setlocal listchars=tab:+\ ,eol:-
@@ -82,6 +80,8 @@ let g:javascript_conceal_arrow_function       = "⇒"
 
 
 " Haskell stuff
+syntax on
+filetype plugin indent on
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
 let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
@@ -92,4 +92,3 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 let g:hindent_on_save = 1
 let g:hindent_indent_size = 2
 let g:hindent_line_length = 80
-
