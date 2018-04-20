@@ -40,6 +40,7 @@ syntax on
 
 let mapleader = " "
 nmap <Leader>b :NERDTreeToggle<cr>
+nmap <Leader> n :NERDTreeFocus<cr>
 " map <C-n> :NERDTreeToggle<CR>
 
 " NERDCommenter
